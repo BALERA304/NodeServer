@@ -1,0 +1,25 @@
+<!DOCTYPE html 5>
+<html lang="ru">
+
+<%- include('./partials/HEAD.ejs')%>
+
+    <body>
+        <%- include('./partials/nav.ejs')%>
+            <h1 class="title">Вторая страница на отрисовку</h1>
+
+            <ul>
+                <% if (myFriends.length){ myFriends.forEach(({link,name})=>{ %>
+                    <li>
+                        <a href="<%= link %>">
+                            <%= name %>
+                        </a>
+                    </li>
+                    <% })} %>
+
+            </ul>
+
+            <marquee behavior="scroll" direction="right">Уже не скучно после такого синтакиса то</marquee>
+
+    </body>
+
+</html>

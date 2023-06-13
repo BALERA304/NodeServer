@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<%- include('./partials/HEAD.ejs')%>
+
+
+    <body>
+        <%- include('./partials/nav.ejs')%>
+
+            <article class="post">
+                <h2 class="date">
+                    <%= post.date %>
+                </h2>
+                <h2 class="author">
+                    <%= post.author %>
+                </h2>
+                <block>
+                    <h2 class="title">
+                        <%= post.title %>
+                    </h2>
+                    <p class="text">
+                        <%=post.text %>
+                    </p>
+                    <h6 class="id">
+                        <%= post.id %>
+                    </h6>
+                </block>
+
+            </article>
+
+
+    </body>
+
+</html>

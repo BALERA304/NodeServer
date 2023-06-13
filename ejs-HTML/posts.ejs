@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/HEAD.ejs')%>
+
+    <body>
+        <%- include('./partials/nav.ejs')%>
+            <h1 class="title">Твои посты</h1>
+            <a href="/addPost">Добавить пост</a>
+
+            <div class="posts">
+                <% if (posts.length){ %>
+                    <% posts.forEach(({id, title, date,text,author})=>{ %>
+                        <article class="post">
+                            <h2 class="date">
+                                <%= date %>
+                            </h2>
+                            <h2 class="author">
+                                <%= author %>
+                            </h2>
+                            <block>
+                                <a href="/posts/<%= id  %>" class="title">
+                                    <%= title %>
+                                </a>
+                                <p class="text">
+                                    <%=text %>
+                                </p>
+                                <h6 class="id">
+                                    <%= id %>
+                                </h6>
+                            </block>
+                        </article>
+                        <% })} %>
+            </div>
+
+    </body>
+
+</html>

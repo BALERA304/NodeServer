@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/HEAD.ejs')%>
+
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="/">Главная</a>
+                    </li>
+                    <li><a href="/posts">Обратно</a></li>
+
+                </ul>
+            </nav>
+        </header>
+        <form id="post-form" method="post" action="/addPost">
+
+            <h1 class="title">Добавь новый пост</h1>
+
+            <input type="text" name="title" placeholder="введите заголовок">
+            <input type="text" name="author" placeholder="введите автора">
+
+            <textarea name="text" placeholder="Напиши текст"></textarea>
+
+            <input type="submit" value="Submit">
+
+        </form>
+    </body>
+
+</html>
