@@ -45,7 +45,7 @@ app.get('/second', (req, res) => {
 // ________________________________________________________________________________
 
 app.get('/posts', (req, res) => {
-    const title = 'Посты'
+    const title = 'Мои Посты'
     const posts = [
         {
             id: myID,
